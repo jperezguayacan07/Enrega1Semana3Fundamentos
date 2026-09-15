@@ -1,0 +1,10 @@
+CC;10000001;Daniel;Martinez
+CC;10000002;Juan;Martinez
+CC;10000003;Pedro;Perez
+CC;10000004;Miguel;Lopez
+CC;10000005;Carlos;Perez
+CC;10000006;Luis;Lopez
+CC;10000007;Andres;Martinez
+CC;10000008;Daniel;Martinez
+CC;10000009;Juan;Perez
+CC;10000010;Sebastian;Torres
