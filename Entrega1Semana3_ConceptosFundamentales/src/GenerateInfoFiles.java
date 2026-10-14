@@ -13,6 +13,15 @@ public class GenerateInfoFiles {
     private static final int SALESMAN_COUNT = 10;
     private static final int PRODUCT_COUNT = 20;
     private static final Random RANDOM = new Random();
+    private static final String[] FIRST_NAMES = {
+            "Daniel", "Juan", "Pedro", "Miguel", "Carlos", "Luis",
+            "Andres", "Sebastian", "Camilo", "Santiago", "Mateo",
+            "Nicolas", "Valentina", "Laura", "Sofia", "Isabella"
+    };
+    private static final String[] LAST_NAMES = {
+            "Martinez", "Perez", "Lopez", "Torres", "Garcia", "Rodriguez",
+            "Gomez", "Hernandez", "Castro", "Ramirez", "Moreno", "Rojas"
+    };
 
     public static void main(String[] args) {
         try {
@@ -86,17 +95,18 @@ public class GenerateInfoFiles {
      * @throws IOException if the file cannot be created
      */
     public static void createSalesManInfoFile(int salesmanCount) throws IOException {
-        String[] names = {"Daniel", "Juan", "Pedro", "Miguel", "Carlos",
-                "Luis", "Andres", "Daniel", "Juan", "Sebastian"};
-        String[] lastNames = {"Martinez", "Martinez", "Perez", "Lopez", "Perez",
-                "Lopez", "Martinez", "Martinez", "Perez", "Torres"};
+        if (salesmanCount < 0) {
+            throw new IllegalArgumentException("La cantidad de vendedores no puede ser negativa.");
+        }
 
         File file = new File(DATA_FOLDER, "salesmen.txt");
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             for (int i = 1; i <= salesmanCount; i++) {
                 long id = 10000000L + i;
-                writer.write("CC;" + id + ";" + names[i - 1] + ";" + lastNames[i - 1]);
+                String firstName = FIRST_NAMES[RANDOM.nextInt(FIRST_NAMES.length)];
+                String lastName = LAST_NAMES[RANDOM.nextInt(LAST_NAMES.length)];
+                writer.write("CC;" + id + ";" + firstName + ";" + lastName);
                 writer.newLine();
             }
         }
