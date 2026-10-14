@@ -1,0 +1,7 @@
+CONCLUSIÓN — CONCEPTOS FUNDAMENTALES DE PROGRAMACIÓN
+
+Durante el desarrollo de este proyecto reforcé el uso de Java para leer y escribir archivos de texto, organizar datos mediante colecciones, aplicar ciclos y condicionales, crear métodos y clases, y ordenar información de acuerdo con criterios definidos. También comprendí la importancia de validar los datos antes de procesarlos y de manejar las excepciones para informar cuando ocurre un problema.
+
+En un contexto profesional, estos conocimientos se pueden aplicar a procesos de registro y análisis de ventas, generación de reportes, procesamiento de archivos de información y automatización de tareas repetitivas. La lectura de archivos de vendedores, productos y ventas permite transformar datos de entrada en reportes que facilitan la revisión de resultados y la toma de decisiones.
+
+Entre las principales dificultades estuvieron mantener coherentes los identificadores de vendedores y productos entre varios archivos, calcular correctamente los totales y asegurar que los reportes quedaran ordenados de mayor a menor. Para abordarlas, se organizaron los datos en estructuras de consulta, se agregaron validaciones y se separó el procesamiento en métodos. Como mejora continua, es importante seguir realizando pruebas con archivos vacíos, formatos incorrectos y cantidades de registros diferentes.
